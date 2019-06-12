@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  origin: MyString
+  description: MyString
+  stock: 1
+  lupulo_type: MyString
+  cone_size: MyString
+  cone_shape: MyString
+  alfa_acids: 1.5
+  beta_acids: 1.5
+  cohumulones: 1.5
+  columbus: 1.5
+  storage_index: 1.5
+  humidity: 1.5
+  uses: MyString
+  beer_type: MyString
+  grams: 1
+
+two:
+  name: MyString
+  origin: MyString
+  description: MyString
+  stock: 1
+  lupulo_type: MyString
+  cone_size: MyString
+  cone_shape: MyString
+  alfa_acids: 1.5
+  beta_acids: 1.5
+  cohumulones: 1.5
+  columbus: 1.5
+  storage_index: 1.5
+  humidity: 1.5
+  uses: MyString
+  beer_type: MyString
+  grams: 1
