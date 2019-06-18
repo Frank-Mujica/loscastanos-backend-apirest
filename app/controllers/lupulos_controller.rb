@@ -1,10 +1,12 @@
 class LupulosController < ApplicationController
-  before_action :set_lupulo, only: [:show, :update, :destroy]
+  #before_action :set_lupulo, only: [:show, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:show]
+  load_and_authorize_resource
 
   # GET /lupulos
   def index
     @lupulos = Lupulo.all
-
     render json: @lupulos
   end
 
@@ -16,7 +18,6 @@ class LupulosController < ApplicationController
   # POST /lupulos
   def create
     @lupulo = Lupulo.new(lupulo_params)
-
     if @lupulo.save
       render json: @lupulo, status: :created, location: @lupulo
     else
@@ -48,4 +49,5 @@ class LupulosController < ApplicationController
     def lupulo_params
       params.permit(:name, :origin, :description, :stock, :lupulo_type, :cone_size, :cone_shape, :alpha_acids, :beta_acids, :cohumulones, :columbus, :storage_index, :humidity, :uses, :beer_type, :grams, :price, :image)
     end
+
 end

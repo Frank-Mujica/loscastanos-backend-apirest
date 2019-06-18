@@ -7,6 +7,7 @@ gem 'devise', git: 'git://github.com/plataformatec/devise.git'
 
 gem 'devise_token_auth'
 
+gem 'cancancan'
 # gem 'omniauth', git: 'git://github.com/omniauth/omniauth.git'
 
 # gem 'omniauth-facebook', git: 'https://github.com/mkdynamic/omniauth-facebook'

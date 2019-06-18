@@ -19,4 +19,9 @@ class ApplicationController < ActionController::API
                 :account_update, keys: [:first_name, :last_name, :email, :password, :birthdate, :region, :commune, :phone_number, :address]
             )
         end
+
+    rescue_from CanCan::AccessDenied do |exception|
+        render json: { error: "Acceso denegado, usted no tiene permisos para realizar está acción" }, status: :forbidden 
+    end
+
 end
