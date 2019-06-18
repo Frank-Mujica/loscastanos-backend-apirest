@@ -12,7 +12,7 @@ class Ability
       can :manage, User
     else
       can :read, Lupulo
-      can [:show, :update], User, :id => user.id
+      can [:show, :update, :destroy], User, :id => user.id
     end
     #
     # The first argument to `can` is the action you are giving the user
